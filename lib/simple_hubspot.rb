@@ -9,6 +9,8 @@ require 'simple_hubspot/utils'
 require 'simple_hubspot/api_client'
 require 'simple_hubspot/contact'
 require 'simple_hubspot/form'
+require 'simple_hubspot/engagement'
+require 'simple_hubspot/file'
 
 module SimpleHubspot
 

@@ -31,6 +31,14 @@ module SimpleHubspot
         response_fail e.response.body
       end
 
+      def do_file_upload(path = nil, file, folder_paths = nil)
+        uri = "#{SimpleHubspot.configuration.api_base}#{path}#{add_apikey}"
+        response = RestClient.post uri, { files: file, folder_paths: folder_paths }, { content_type: 'multipart/form-data' }
+        response_success response.body
+      rescue RestClient::BadRequest => e
+        response_fail e.response.body
+      end
+
       private
         def add_apikey
           "?hapikey=#{SimpleHubspot.configuration.hapikey}"
