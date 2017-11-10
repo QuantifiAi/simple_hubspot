@@ -11,6 +11,7 @@ require 'simple_hubspot/contact'
 require 'simple_hubspot/form'
 require 'simple_hubspot/engagement'
 require 'simple_hubspot/file'
+require 'simple_hubspot/single_email'
 
 module SimpleHubspot
 
